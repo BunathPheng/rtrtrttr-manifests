@@ -1,0 +1,25 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtrtrttr
+  labels:
+    app: rtrtrttr
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: rtrtrttr
+  template:
+    metadata:
+      labels:
+        app: rtrtrttr
+    spec:
+      containers:
+        - name: rtrtrttr
+          image: docker.io/phengbunath/rtrtrttr:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
